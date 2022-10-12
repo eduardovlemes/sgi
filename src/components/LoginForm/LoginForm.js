@@ -8,7 +8,7 @@ export default function LoginForm() {
 
   function handleSubmit(event) {
     try {
-      event.preventDefaul();
+      event.preventDefault();
       if (!email) {
         alert("O preenchimento do campo Email é obrigatório.");
         return;
@@ -27,7 +27,8 @@ export default function LoginForm() {
     <form onSubmit={handleSubmit}>
       <div>
         <label>
-          Email<input
+          Email
+          <input
             type="email"
             placeholder="exemplo@mail.com"
             required
@@ -36,7 +37,8 @@ export default function LoginForm() {
           />
         </label>
         <label>
-          Senha<input
+          Senha
+          <input
             type="password"
             required
             value={password}
@@ -44,7 +46,7 @@ export default function LoginForm() {
           />
         </label>
         <div>
-          <button>Acessar</button>
+          <button type="submit">Acessar</button>
         </div>
       </div>
     </form>
