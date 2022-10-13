@@ -14,10 +14,93 @@ export default function EnterpriseForm() {
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
 
+  function handleSubmit(event) {
+    try {
+      event.preventDefault();
+      if (!corporateName) {
+        alert("O preenchimento do campo Razão Social é obrigatório.");
+        return;
+      } else if (!tradeName) {
+        alert("O preenchimento do campo Nome Fantasia é obrigatório.");
+        return;
+      } else if (!cnpj) {
+        alert("O preenchimento do campo CNPJ é obrigatório.");
+        return;
+      } else if (!email) {
+        alert(
+          "O preenchimento do campo E-mail é obrigatório. Digite um E-mail válido."
+        );
+        return;
+      } else if (!postalcode) {
+        alert("O preenchimento do campo CEP é obrigatório.");
+        return;
+      } else if (!street) {
+        alert("O preenchimento do campo Rua é obrigatório.");
+        return;
+      } else if (!addressNumber) {
+        alert("O preenchimento do campo Número é obrigatório.");
+        return;
+      } else if (!district) {
+        alert("O preenchimento do campo Bairro é obrigatório.");
+        return;
+      } else if (!city) {
+        alert("O preenchimento do campo Cidade é obrigatório.");
+        return;
+      } else if (!latitude) {
+        alert("O preenchimento do campo Latitude é obrigatório.");
+        return;
+      } else if (!longitude) {
+        alert("O preenchimento do campo Longitude é obrigatório.");
+        return;
+      }
+      event.target.checkValidity();
+      alert("Empresa cadastrada com sucesso!");
+      setCorporateName("");
+      setTradeName("");
+      setCnpj("");
+      setEmail("");
+      setPostalcode("");
+      setStreet("");
+      setAddressNumber("");
+      setDistrict("");
+      setCity("");
+      setAddressCompl("");
+      setLatitude("");
+      setLongitude("");
+    } catch (error) {
+      alert("Erro ao cadastrar a empresa. Tente novamente.");
+    }
+
+    const sendInformationToServer = fetch("http://localhost:3001/enterprises", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        corporateName: corporateName,
+        tradeName: tradeName,
+        cnpj: cnpj,
+        email: email,
+        postalcode: postalcode,
+        street: street,
+        addressNumber: addressNumber,
+        district: district,
+        city: city,
+        addressCompl: addressCompl,
+        latitude: latitude,
+        longitude: longitude,
+      }),
+    });
+    console.log(sendInformationToServer);
+  }
+
+  
+
   return (
     <div>
       <h2>Cadastrar empresas</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label>
             Razão Social*
