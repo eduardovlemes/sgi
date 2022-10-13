@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ItemForm() {
   const [urlImage, setUrlImage] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
-  const [caterer, setCaterer] = useState([]);
-  const [group, setGroup] = useState([]);
+  const [caterer, setCaterer] = useState("");
+  const [group, setGroup] = useState("");
+  const [catererOptions, setCatererOptions] = useState([]);
+  const [groupOptions, setGroupOptions] = useState([]);
 
   function handleSubmit(event) {
     try {
@@ -59,6 +61,28 @@ export default function ItemForm() {
     });
     console.log(sendInformationToServer);
   }
+
+  useEffect(() => {
+    async function getCaterer() {
+      await fetch("http://localhost:3001/caterers")
+        .then((response) => response.json())
+        .then((dataCaterersServer) => {
+          setCatererOptions(dataCaterersServer);
+        });
+    }
+    getCaterer();
+  }, []);
+
+  useEffect(() => {
+    async function getGroup() {
+      await fetch("http://localhost:3001/groups")
+        .then((response) => response.json())
+        .then((dataGroupsServer) => {
+          setGroupOptions(dataGroupsServer);
+        });
+    }
+    getGroup();
+  }, []);
 
   return (
     <div>
@@ -122,6 +146,9 @@ export default function ItemForm() {
               <option value="" selected disabled>
                 Selecione
               </option>
+              {catererOptions.map((option) => (
+                <option value={option}>{option}</option>
+              ))}
             </select>
           </label>
 
@@ -135,6 +162,9 @@ export default function ItemForm() {
               <option value="" selected disabled>
                 Selecione
               </option>
+              {groupOptions.map((option) => (
+                <option value={option}>{option}</option>
+              ))}
             </select>
           </label>
         </div>
