@@ -95,7 +95,31 @@ export default function EnterpriseForm() {
     console.log(sendInformationToServer);
   }
 
-  
+  async function handleAddress() {
+    try {
+      await fetch(
+        `https://viacep.com.br/ws/${postalcode.replace(/[^0-9]/, "")}/json/`
+      )
+        .then((response) => response.json())
+        .then((dataViaCep) => {
+          setStreet(dataViaCep.logradouro);
+          setDistrict(dataViaCep.bairro);
+          setCity(dataViaCep.localidade);
+        })
+        .then(
+          await fetch(
+            `https://nominatim.openstreetmap.org/search.php?q=${postalcode}+${street}+${district}&format=json`
+          )
+            .then((response) => response.json())
+            .then((dataNominatim) => {
+              setLatitude(dataNominatim[0].lat);
+              setLongitude(dataNominatim[0].lon);
+            })
+        );
+    } catch (error) {
+      alert("Ocorreu um erro. Tente novamente mais tarde.");
+    }
+  }
 
   return (
     <div>
@@ -155,6 +179,7 @@ export default function EnterpriseForm() {
               required
               type="number"
               placeholder="00.000-000"
+              onBlur={handleAddress}
               value={postalcode}
               onChange={(event) => setPostalcode(event.target.value)}
             />
