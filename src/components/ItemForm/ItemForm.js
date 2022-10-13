@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function ItemForm (){
+export default function ItemForm() {
   const [urlImage, setUrlImage] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -8,10 +8,62 @@ export default function ItemForm (){
   const [caterer, setCaterer] = useState([]);
   const [group, setGroup] = useState([]);
 
-    return(
-        <div>
+  function handleSubmit(event) {
+    try {
+      event.preventDefault();
+      if (!urlImage) {
+        alert("O preenchimento do campo Url da imagem é obrigatório.");
+        return;
+      } else if (!name) {
+        alert("O preenchimento do campo Laboratório é obrigatório.");
+        return;
+      } else if (!price) {
+        alert("O preenchimento do campo Dosagem é obrigatório.");
+        return;
+      } else if (!description) {
+        alert("O preenchimento do campo Tipo é obrigatório.");
+        return;
+      } else if (!caterer) {
+        alert("O preenchimento do campo Preço é obrigatório.");
+        return;
+      } else if (!group) {
+        alert("O preenchimento do campo Preço é obrigatório.");
+        return;
+      }
+      event.target.checkValidity();
+      alert("Produto cadastrado com sucesso!");
+      setUrlImage("");
+      setName("");
+      setPrice("");
+      setDescription("");
+      setCaterer("");
+      setGroup("");
+    } catch (error) {
+      alert("Erro no cadastro do produto. Tente novamente.");
+    }
+
+    const sendInformationToServer = fetch("http://localhost:3001/items", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: JSON.stringify({
+        urlImage: urlImage,
+        name: name,
+        price: price,
+        description: description,
+        caterer: caterer,
+        group: group,
+      }),
+    });
+    console.log(sendInformationToServer);
+  }
+
+  return (
+    <div>
       <h2>Cadastrar produto</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label>
             Url da imagem*
@@ -92,5 +144,5 @@ export default function ItemForm (){
         </div>
       </form>
     </div>
-    )
+  );
 }
