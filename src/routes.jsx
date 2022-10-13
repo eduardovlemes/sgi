@@ -14,7 +14,7 @@ export default function Router() {
         <Route path="/mapa" element={<MapPage />} />
         <Route path="/novaempresa" element={<EnterpriseRegistrationPage />} />
         <Route path="/novoitem" element={<ItemRegistrationPage />} />
-        <Route path="/listaitem" element={<ListItemsPage />} />
+        <Route path="/listaitems" element={<ListItemsPage />} />
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>
     </BrowserRouter>
