@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function ItemForm (){
-    const [urlImage, setUrlImage] = useState("");
+  const [urlImage, setUrlImage] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
