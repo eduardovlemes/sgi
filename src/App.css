@@ -26,6 +26,14 @@ input {
   padding: 8px;
   outline: none;
 }
+.page-container {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 64px;
+}
+h2 {
+  color: #084420;
+}
 
 /* Login */
 .login-form {
@@ -92,7 +100,7 @@ header button {
   font-weight: 500;
 }
 header button:hover {
-  color: #31955F;
+  color: #31955f;
 }
 .logout-button {
   cursor: pointer;
@@ -100,4 +108,15 @@ header button:hover {
 .logout-button:hover {
   color: #c3122f;
   font-weight: bold;
+}
+
+/* map */
+.map-container p {
+  margin: 7px;
+}
+.leaflet-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
 }
