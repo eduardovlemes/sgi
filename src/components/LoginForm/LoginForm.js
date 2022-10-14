@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logoSGI from "../../assets/SGI.png";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -24,11 +25,13 @@ export default function LoginForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
+    <form className="login-form" onSubmit={handleSubmit}>
+      <img className="login-logo" src={logoSGI} alt="logo" />
+      <div className="login-fields">
         <label>
           Email
           <input
+            className="login-input"
             type="email"
             placeholder="exemplo@mail.com"
             required
@@ -39,14 +42,17 @@ export default function LoginForm() {
         <label>
           Senha
           <input
+            className="login-input"
             type="password"
             required
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
         </label>
-        <div>
-          <button type="submit">Acessar</button>
+        <div className="button-container">
+          <button className="login-button" type="submit">
+            Acessar
+          </button>
         </div>
       </div>
     </form>

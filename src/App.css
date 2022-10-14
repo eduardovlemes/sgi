@@ -1,0 +1,71 @@
+/* verde escuro #084420
+verde claro #31955F
+cinza header #A9A9A9 */
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 19px;
+}
+label {
+  display: grid;
+  margin-top: 12px;
+}
+input {
+  border: 1px solid #31955f;
+  border-radius: 4px;
+  margin-top: 4px;
+  padding: 8px;
+  outline: none;
+}
+
+/* Login */
+.login-form {
+  align-items: center;
+  border-radius: 10px;
+  width: 300px;
+  padding: 40px;
+  margin: 8% auto;
+}
+.login-form:hover {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.274);
+}
+.login-logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
+.login-fields {
+  display: flex;
+  flex-direction: column;
+}
+.login-input {
+  width: 280px;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+.login-button {
+  width: 160px;
+  padding: 16px;
+  margin-top: 30px;
+  background-color: #31955f;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.712);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.login-button:hover {
+  background-color: #3fbd7a;
+}
