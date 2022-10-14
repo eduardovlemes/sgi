@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import logoSGI from "../../assets/SGI.png"
 
 export default function Header() {
   const navigate = useNavigate();
@@ -11,16 +12,17 @@ export default function Header() {
 
   return (
     <header>
+      <img className="header-logo" src={logoSGI} alt="logo" onClick={() => navigate("/mapa")}/>
       <nav>
         <button onClick={() => navigate("/novaempresa")}>
-          CADASTRAR EMPRESA
+          Cadastrar Empresas
         </button>
-        <button onClick={() => navigate("/mapa")}>MAPA</button>
-        <button onClick={() => navigate("/novoitem")}>CADASTRAR PRODUTO</button>
+        <button onClick={() => navigate("/mapa")}>Mapa</button>
+        <button onClick={() => navigate("/novoitem")}>Cadastrar Produtos</button>
         <button onClick={() => navigate("/listaitems")}>
-          LISTA DE PRODUTOS
+          Lista de Produtos
         </button>
-        <button onClick={handleLogout}>SAIR</button>
+        <button className="logout-button" onClick={handleLogout}>Sair</button>
       </nav>
     </header>
   );

@@ -69,3 +69,35 @@ input {
 .login-button:hover {
   background-color: #3fbd7a;
 }
+
+/* Header */
+header {
+  display: flex;
+}
+.header-logo {
+  width: 140px;
+  margin: 16px 60px;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 300px;
+}
+header button {
+  background-color: transparent;
+  color: #8a8a8a;
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+header button:hover {
+  color: #31955F;
+}
+.logout-button {
+  cursor: pointer;
+}
+.logout-button:hover {
+  color: #c3122f;
+  font-weight: bold;
+}
