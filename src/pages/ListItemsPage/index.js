@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
 import ListItems from "../../components/ListItems/ListItems";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
@@ -22,7 +24,9 @@ export default function ListItemsPage() {
     setFilterByName(
       items.filter((item) => {
         if (
-          item.name.toLocaleLowerCase().indexOf(expression.toLocaleLowerCase()) !== -1
+          item.name
+            .toLocaleLowerCase()
+            .indexOf(expression.toLocaleLowerCase()) !== -1
         ) {
           return item;
         }
@@ -33,6 +37,7 @@ export default function ListItemsPage() {
   return (
     <>
       <div>
+        <Header />
         <div>
           <SearchBar
             value={expression}
@@ -58,6 +63,7 @@ export default function ListItemsPage() {
           })}
         </ul>
       </div>
+      <Footer />
     </>
   );
 }

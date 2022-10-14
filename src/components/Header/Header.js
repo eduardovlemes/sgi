@@ -4,7 +4,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   function handleLogout() {
-    if (confirm("Deseja sair?")) {
+    if (window.confirm("Deseja sair?")) {
       navigate("/");
     }
   }
