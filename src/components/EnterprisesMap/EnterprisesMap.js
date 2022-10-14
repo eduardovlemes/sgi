@@ -22,6 +22,7 @@ export default function EnterpriseMap() {
         center={[-13.747492, -53.470339]}
         zoom={4}
         scrollWheelZoom={true}
+        style={{width:"500px", height:"500px"}}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
