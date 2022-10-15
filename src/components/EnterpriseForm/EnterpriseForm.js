@@ -108,7 +108,7 @@ export default function EnterpriseForm() {
         })
         .then(
           await fetch(
-            `https://nominatim.openstreetmap.org/search.php?q=${postalcode}+${street}+${district}&format=json`
+            `https://nominatim.openstreetmap.org/search.php?q=${postalcode}+${street}+${district}+brazil&format=json`
           )
             .then((response) => response.json())
             .then((dataNominatim) => {

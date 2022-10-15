@@ -87,15 +87,13 @@ export default function ItemForm() {
   return (
     <div className="page-container">
       <h2>Cadastrar produto</h2>
-      <div className=".item-image">
-        {urlImage && (
-          <img src={urlImage} alt="user" width={150} />
-        )}
+      <div className="item-image">
+        {urlImage && <img src={urlImage} alt="item" width={250} />}
       </div>
       <form onSubmit={handleSubmit}>
         <div className="form-line">
           <label className="input-100">
-            Url da imagem*
+            URL da imagem*
             <input
               required
               type="text"
