@@ -51,7 +51,7 @@
       "urlImage": "https://farmagora.vteximg.com.br/arquivos/ids/169210-1000-1000/734149.jpg?v=637343310335770000",
       "name": "Medidor de Glicemia OneTouch Select Plus Flex",
       "price": "45,90",
-      "description": "Possui tecnologia ColorSure que mostra instantaneamente se o nível de glicose no sangue está dentro ou fora do intervalo recomendado para você. Design compacto e moderno. Não necessita de codificação. O medidor OneTouch Select Plus Flex possui uma faixa de medição de 20 a 600 mg/dL.",
+      "description": "Possui tecnologia ColorSure que mostra instantaneamente se o nível de glicose no sangue está dentro ou fora do intervalo recomendado para você. O medidor OneTouch Select Plus Flex possui uma faixa de medição de 20 a 600 mg/dL.",
       "caterer": "OneTouch",
       "group": "Aparelhos",
       "id": "abju"
@@ -60,7 +60,7 @@
       "urlImage": "https://farmagora.vteximg.com.br/arquivos/ids/169624-1000-1000/730299.jpg?v=637343310588200000",
       "name": "Freestyle Optium Neo 100 Tiras Grátis 50 Tiras",
       "price": "189,90",
-      "description": "Resultados em 05 segundos. Aceita uma segunda gota de sangue em até 30 seg. Possui as tiras teste embaladas individualmente. Pequena amostra de sangue: 0,6 microlitros. Tira teste que minimiza efeitos de agentes interferentes.",
+      "description": "Resultados em 05 segundos. Possui as tiras teste embaladas individualmente. Pequena amostra de sangue: 0,6 microlitros. Tira teste que minimiza efeitos de agentes interferentes.",
       "caterer": "Abbott",
       "group": "Aparelhos",
       "id": "abmo"
@@ -69,7 +69,7 @@
       "urlImage": "https://farmagora.vteximg.com.br/arquivos/ids/185829-1000-1000/rotulo_fa_generico_receita.jpg?v=637816467914270000",
       "name": "Loratadina Xarope 100ml",
       "price": "14,00",
-      "description": "Este medicamento é indicado para o alívio dos sintomas associados com rinite alérgica, como: coceira nasal, coriza, espirros, ardor e coceira nos olhos. Loratadina também é indicada para o alívio dos sinais e sintomas da urticária e de outras alergias de pele. Seu uso é contraindicado em caso de alergia aos componentes da fórmula.",
+      "description": "Este medicamento é indicado para o alívio dos sintomas associados com rinite alérgica, como: coceira nasal, coriza, espirros, ardor e coceira nos olhos. Loratadina também é indicada para o alívio dos sinais e sintomas da urticária e de outras alergias de pele.",
       "caterer": "EMS",
       "group": "Medicamento",
       "id": "abmm"
@@ -78,7 +78,7 @@
       "urlImage": "https://farmagora.vteximg.com.br/arquivos/ids/169829-1000-1000/737313.jpg?v=637343310711070000",
       "name": "Vitamina E 400mg com 30 Cápsulas",
       "price": "37,89",
-      "description": "Antioxidante que auxilia na proteção dos danos causados pelos radicais livres. AVitamina Ede 400mg (acetato de racealfatocoferol) possui alto teor de vitamina E em cápsulas gelatinosas moles (fácil de engolir).     Crianças acima de 9 anos, adultos, gestantes e lactantes consumir 1 cápsula ao dia. 1 cápsula contém 400 UI, que atende a 2680% da IDR (Ingestão diária recomendada para adultos, gestantes e lactantes).",
+      "description": "Antioxidante que auxilia na proteção dos danos causados pelos radicais livres. AVitamina Ede 400mg (acetato de racealfatocoferol) possui alto teor de vitamina E em cápsulas gelatinosas moles (fácil de engolir).",
       "caterer": "Catarinense Pharma",
       "group": "Suplemento",
       "id": "afgb"
@@ -87,7 +87,7 @@
       "urlImage": "https://farmagora.vteximg.com.br/arquivos/ids/171920-1000-1000/732729.jpg?v=637343312174630000",
       "name": "Repelente Effex Ultra 100ml",
       "price": "49,78",
-      "description": "Effex é a marca de repelente de insetos de alta proteção do Aché Laboratórios, especialmente formulada com a Icaridina, ingrediente ativo para proteção contra picadas dos insetos Aedes aegypti (transmissor da Zika, Dengue, Chikungunya e Febre Amarela) , Anopheles (transmissor da Malária) e Culex (transmissor da Filariose). Effex Ultra é um repelente de máxima proteção pois possui em sua formulação 30% de Icaridina o que garante proteção para toda a família por até 13 horas contra picadas de mosquitos e moscas. Com adorável fragrância e dermatologicamente testado.",
+      "description": "Effex é a marca de repelente de insetos de alta proteção do Aché Laboratórios, especialmente formulada com a Icaridina, ingrediente ativo para proteção contra picadas dos insetos Aedes aegypti (transmissor da Zika, Dengue, Chikungunya e Febre Amarela) , Anopheles (transmissor da Malária) e Culex (transmissor da Filariose).",
       "caterer": "Aché",
       "group": "Beleza e Proteção",
       "id": "adb"
