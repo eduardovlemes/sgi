@@ -8,12 +8,12 @@ export default function ListItems({
   group,
 }) {
   return (
-    <li>
-      <img alt={alt} src={src} width={250}/>
+    <li className="list-item">
+      <img className="item-image" alt={alt} src={src}/>
       <div>
         <h3>{name}</h3>
-        <p>{price}</p>
-        <p>{description}</p>
+        <p>R$ {price}</p>
+        {/* <p>{description}</p> */}
         <p>{caterer}</p>
         <p>{group}</p>
       </div>

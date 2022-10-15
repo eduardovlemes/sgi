@@ -1,7 +1,8 @@
 export default function SearchBar({ onChange, placeholder, value }) {
   return (
-    <div>
+    <div className="search-field">
       <input
+      className="search-bar"
         type="text"
         placeholder={placeholder}
         onChange={onChange}

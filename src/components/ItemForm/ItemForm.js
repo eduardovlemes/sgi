@@ -87,6 +87,11 @@ export default function ItemForm() {
   return (
     <div className="page-container">
       <h2>Cadastrar produto</h2>
+      <div className=".item-image">
+        {urlImage && (
+          <img src={urlImage} alt="user" width={150} />
+        )}
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="form-line">
           <label className="input-100">
@@ -101,7 +106,7 @@ export default function ItemForm() {
           </label>
         </div>
         <div className="form-line">
-          <label  className="input-66">
+          <label className="input-66">
             Nome*
             <input
               required

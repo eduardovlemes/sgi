@@ -1,8 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      <div />
-      <ul>
+      <ul className="footer-links">
         <li>
           <a
             href="https://www.linkedin.com/in/eduardovlemes/"

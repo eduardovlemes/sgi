@@ -36,32 +36,32 @@ export default function ListItemsPage() {
 
   return (
     <>
-      <div>
-        <Header />
-        <div>
-          <SearchBar
-            value={expression}
-            placeholder="Buscar por produto.."
-            onChange={(event) => setExpression(event.target.value)}
-          />
-          <h2>Produtos cadastrados</h2>
-        </div>
-        <ul>
-          {filterByName.map((item) => {
-            return (
-              <ListItems
-                key={item.id}
-                alt={item.name}
-                src={item.urlImage}
-                name={item.name}
-                price={item.price}
-                description={item.description}
-                caterer={item.caterer}
-                group={item.group}
-              />
-            );
-          })}
-        </ul>
+      <Header />
+      <div className="page-container">
+      <div className="title-search-area">
+        <SearchBar
+          value={expression}
+          placeholder="Buscar por produto.."
+          onChange={(event) => setExpression(event.target.value)}
+        />
+        <h2>Produtos cadastrados</h2>
+      </div>
+      <ul className="list-container">
+        {filterByName.map((item) => {
+          return (
+            <ListItems
+              key={item.id}
+              alt={item.name}
+              src={item.urlImage}
+              name={item.name}
+              price={item.price}
+              description={item.description}
+              caterer={item.caterer}
+              group={item.group}
+            />
+          );
+        })}
+      </ul>
       </div>
       <Footer />
     </>
