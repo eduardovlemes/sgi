@@ -85,11 +85,11 @@ export default function ItemForm() {
   }, []);
 
   return (
-    <div>
+    <div className="page-container">
       <h2>Cadastrar produto</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>
+        <div className="form-line">
+          <label className="input-100">
             Url da imagem*
             <input
               required
@@ -99,8 +99,9 @@ export default function ItemForm() {
               onChange={(event) => setUrlImage(event.target.value)}
             />
           </label>
-
-          <label className="input-49">
+        </div>
+        <div className="form-line">
+          <label  className="input-66">
             Nome*
             <input
               required
@@ -110,7 +111,7 @@ export default function ItemForm() {
             />
           </label>
 
-          <label>
+          <label className="input-32">
             Custo unitário*
             <input
               required
@@ -120,23 +121,23 @@ export default function ItemForm() {
               onChange={(event) => setPrice(event.target.value)}
             />
           </label>
-
-          <label>
-            Descrição
-            <textarea
-              type="text"
-              rows={5}
-              placeholder="Digite uma descrição sobre o produto."
-              value={description}
-              onChange={(event) => setDescription(event.target.value)}
-            />
-          </label>
         </div>
+
+        <label>
+          Descrição
+          <textarea
+            type="text"
+            rows={5}
+            placeholder="Digite uma descrição sobre o produto."
+            value={description}
+            onChange={(event) => setDescription(event.target.value)}
+          />
+        </label>
 
         <hr></hr>
 
-        <div>
-          <label>
+        <div className="form-line">
+          <label className="input-49">
             Fornecedor*
             <select
               required
@@ -152,7 +153,7 @@ export default function ItemForm() {
             </select>
           </label>
 
-          <label>
+          <label className="input-49">
             Grupo*
             <select
               required
@@ -169,8 +170,8 @@ export default function ItemForm() {
           </label>
         </div>
 
-        <div>
-          <button>Salvar</button>
+        <div className="buttons-form">
+          <button className="button-save">Salvar</button>
         </div>
       </form>
     </div>

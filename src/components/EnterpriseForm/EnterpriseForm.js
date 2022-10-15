@@ -122,11 +122,11 @@ export default function EnterpriseForm() {
   }
 
   return (
-    <div>
+    <div className="page-container">
       <h2>Cadastrar empresas</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>
+        <div className="form-line">
+          <label className="input-49">
             Razão Social*
             <input
               required
@@ -137,7 +137,7 @@ export default function EnterpriseForm() {
             />
           </label>
 
-          <label className="input-32">
+          <label className="input-49">
             Nome Fantasia*
             <input
               required
@@ -147,8 +147,10 @@ export default function EnterpriseForm() {
               onChange={(event) => setTradeName(event.target.value)}
             />
           </label>
+        </div>
 
-          <label>
+        <div className="form-line">
+          <label className="input-49">
             CNPJ*
             <input
               required
@@ -158,7 +160,8 @@ export default function EnterpriseForm() {
               onChange={(event) => setCnpj(event.target.value)}
             />
           </label>
-          <label>
+
+          <label className="input-49">
             E-mail*
             <input
               required
@@ -172,8 +175,8 @@ export default function EnterpriseForm() {
 
         <hr></hr>
 
-        <div>
-          <label>
+        <div className="form-line">
+          <label className="input-32">
             CEP*
             <input
               required
@@ -185,7 +188,7 @@ export default function EnterpriseForm() {
             />
           </label>
 
-          <label>
+          <label className="input-66">
             Logradouro*
             <input
               required
@@ -194,8 +197,10 @@ export default function EnterpriseForm() {
               onChange={(event) => setStreet(event.target.value)}
             />
           </label>
+        </div>
 
-          <label>
+        <div className="form-line">
+          <label className="input-32">
             Número*
             <input
               required
@@ -205,18 +210,7 @@ export default function EnterpriseForm() {
             />
           </label>
 
-          <label>
-            Complemento
-            <input
-              type="text"
-              value={addressCompl}
-              onChange={(event) => setAddressCompl(event.target.value)}
-            />
-          </label>
-        </div>
-
-        <div>
-          <label>
+          <label className="input-32">
             Bairro*
             <input
               required
@@ -226,7 +220,7 @@ export default function EnterpriseForm() {
             />
           </label>
 
-          <label className="input-25">
+          <label className="input-32">
             Cidade*
             <input
               required
@@ -237,10 +231,21 @@ export default function EnterpriseForm() {
           </label>
         </div>
 
+        <div className="form-line">
+          <label className="input-100">
+            Complemento
+            <input
+              type="text"
+              value={addressCompl}
+              onChange={(event) => setAddressCompl(event.target.value)}
+            />
+          </label>
+        </div>
+
         <hr></hr>
 
-        <div>
-          <label className="input-5">
+        <div className="form-line">
+          <label className="input-49">
             Latitude*
             <input
               required
@@ -250,7 +255,7 @@ export default function EnterpriseForm() {
             />
           </label>
 
-          <label>
+          <label className="input-49">
             Longitude*
             <input
               required
@@ -260,8 +265,8 @@ export default function EnterpriseForm() {
             />
           </label>
         </div>
-        <div>
-          <button>Salvar</button>
+        <div className="buttons-form">
+          <button className="button-save">Salvar</button>
         </div>
       </form>
     </div>
