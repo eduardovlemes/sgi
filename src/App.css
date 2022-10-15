@@ -213,20 +213,72 @@ hr {
 .search-field {
   margin-left: 210px;
 }
+.search-icon {
+  vertical-align: middle;
+  padding-left: 8px;
+  color: #084420;
+}
 
 /*footer*/
 footer {
   background-color: #084420;
-  height: 200px;
+  height: 100px;
   margin-top: 72px;
   width: 100%;
   bottom: 0;
 }
-
 .footer-links {
   display: flex;
-  flex-direction: column;
-  margin: 64px;
+  flex-direction: row;
+  margin: 74px;
   padding-top: 30px;
-  gap: 10px;
+  gap: 35px;
+}
+.footer-icon {
+  padding-top: 8px;
+  
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+
+/* Responsividade */
+@media only screen and (max-width: 1100px) {
+  form {
+    flex-wrap: wrap;
+  }
+  .form-line {
+    flex-direction: column;
+    width: 100%;
+  }
+  .input-32 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .title-search-area {
+    flex-direction: column-reverse;
+  }
+  .search-bar {
+    margin-left: 0;
+    margin-top: 20px;
+    width: 350px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  nav button {
+    font-size: 10px;
+    padding: 14px 10px;
+  }
+}
+@media only screen and (min-height: 780px) {
+  footer {
+    position: fixed;
+  }
+  .footer-links{
+    margin-top: 0px;
+    margin-left: 60px;
+  }
 }
