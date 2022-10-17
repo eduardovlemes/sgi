@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# DEVinHouse - SGI - Módulo Front-End
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Você está prestes a entrar para o time de Desenvolvedores da DEVin Corp. Para concretizar a sua contratação, você deverá resolver um desafio utilizando React. O time de recrutamento necessita que você crie uma aplicação protótipo para o gerenciamento de empresas e produtos, chamada Sistema de Gestão Integrada - SGI.
 
-## Available Scripts
+## Requisitos da Aplicação
+A aplicação que deverá ser realizada individualmente, deve contemplar os seguintes requisitos:
 
-In the project directory, you can run:
+- Uma página de login contendo um campo de email e senha. No evento de onSubmit, validar se os campos foram preenchidos: E-Mail (obrigatório) e Senha (obrigatório). Ao validar os campos de input, o usuário é redirecionado para a tela de Mapa.
 
-### `npm start`
+- Uma página de cadastro de nova empresa, contendo os campos: razão social, nome fantasia, cnpj, e-mail, cep, endereço, número, bairro, cidade, complemento, latitude e longitude; Todos os campos são obrigatório, exceto o campo complemento (validar no método onSubmit). Ao cadastrar uma nova empresa, mostrar uma mensagem de feedback de empresa cadastrada com sucesso (tratar o método onSubmit com Try/Catch).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Uma página de cadastro de produto, contendo os campos url do produto, nome do produto, preço unitário, descrição (<textarea>) , fornecedor do produto (<select/>)  e grupo (<select/>). Ao cadastrar um novo produto, mostrar uma mensagem de feedback de produto cadastrado com sucesso (tratar o método onSubmit com Try/Catch). As opções do select de grupo e fornecedor devem ser preenchidas de acordo com as rotas /categorias e /fornecedores
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Uma tela de mapa, contendo um Mapa centralizado e com marcadores de todas as empresas cadastradas no sistema (usar a latitude e longitude da empresa para definir a localização no mapa). 
 
-### `npm test`
+- Uma implementação extra por parte do aluno: Ex: uma tela de cadastro de fornecedores, uma tela de listagens de produtos, etc...
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Plano de Projeto
+Ao construir a aplicação Sistema de gestão integrada - SGI  contendo as páginas de Mapa, Empresas, Produtos e login,  o aluno estará colocando em prática os aprendizados em:
+- HTML: principais tags como head, title, body, div, h1, form, input, button, ul, li. Atributos de tags como class, id, type.
+- CSS: estilizar a página, os botões, inputs, alterar atributos dos elementos da tela de acordo com a interação do usuário para uma melhor experiência do usuário (UX), Alinhamento de elementos com flex-box.
+- Javascript: variáveis, arrays, funções .map(), .filter(), .reducer(),  manipulação de eventos onChange, onSubmit, json-server.
+- React: Componentes funcionais, Props, useEffect, useState, Estado do componente, Componentes de terceiros (react-leaflet), validação de formulários, chamadas para API usando API Fetch.
